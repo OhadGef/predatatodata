@@ -10,5 +10,5 @@ RUN mkdir -p ./data
 
 COPY . /app
 
-CMD node test.js
+CMD node preDataToData.js
 
