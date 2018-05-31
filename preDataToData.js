@@ -1,9 +1,7 @@
-
+const fs = require('fs');
 const nodes = process.env.NODES;
 const location = process.env.LOCATION;
 
-
-const fs = require('fs');
 const smallGraph = require(`${location}/${nodes}.json`);
 
 
@@ -39,3 +37,10 @@ fs.writeFile(`${location}/${nodes}N.json`, JSON.stringify(tmp), 'utf8', (err)=> 
     if (err) throw err;
     console.log('complete');
 });
+
+
+process.stdin.setRawMode(true);
+process.stdin.resume();
+process.stdin.on('data', process.exit.bind(process, 0)); 
+
+
