@@ -6,8 +6,9 @@ COPY . /app
 
 RUN npm install
 
-RUN mkdir -p /data
-RUN chmod -R 777 /data
+RUN mkdir -p /app/data
+RUN chmod -R 777 /app
+RUN chmod -R 777 /app/data
 
 COPY . /app
 
